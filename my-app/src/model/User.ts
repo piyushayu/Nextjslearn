@@ -20,7 +20,7 @@ export const MessageSchema: Schema<Message> = new Schema({
 export interface User extends Document {
   username: string;
   email: string;
-  hashedPassword: string;
+  Password: string;
   verifyCode?: string;
   verifyCodeExpiry?: Date;
   isVerified: boolean;
@@ -44,7 +44,7 @@ const UserSchema: Schema<User> = new Schema(
       unique: true,
       match: [/.+\@.+\..+/, "Please use a valid email address"],
     },
-    hashedPassword: {
+    Password: {
       type: String,
       required: [true, "Password is required"],
     },
@@ -66,7 +66,7 @@ const UserSchema: Schema<User> = new Schema(
   },
   { timestamps: true }
 );
-
+// first thing which is diff from regular backend
 const UserModel = (mongoose.models.Users as mongoose.Model<User>) ||
  mongoose.model<User>("Users" , UserSchema);
 
