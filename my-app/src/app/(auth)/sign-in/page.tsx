@@ -12,3 +12,5 @@ export default function Component() {
     )
 }
 }
+
+//this is the template that will be visible on the webstie 

@@ -19,6 +19,7 @@ declare module 'next-auth' {
   }
 }
 
+// other method of customizing the value 
 declare module 'next-auth/jwt' {
   interface JWT {
     _id?: string;
@@ -26,4 +27,4 @@ declare module 'next-auth/jwt' {
     isVerified?: boolean;
     username?: string;
   }
-}
+}

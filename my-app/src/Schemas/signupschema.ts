@@ -1,10 +1,9 @@
 import {email, z} from "zod";
 
-const usernameschema = z.string()
+export const usernameschema = z.string()
 .min(3,"Username must be at least 3 characters")
 .max(20,"Username must be at most 20 characters")
 .regex(/^[a-zA-Z0-9_]+$/,"Username can only contain letters, numbers and underscores")
-
 
 const signupschema = z.object({
     username : usernameschema,

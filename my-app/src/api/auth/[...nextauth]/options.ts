@@ -47,7 +47,8 @@ export const authoptions : NextAuthOptions = {
            }
         }
 
-       })
+       }) ,
+       // if we want to add oauth or auth with github and other then we just have to provide the simple provider for them 
     ] ,
 
     pages : {
