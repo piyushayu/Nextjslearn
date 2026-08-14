@@ -4,11 +4,10 @@ import UserModel from "@/src/model/User";
 import { User } from "next-auth";
 import { authoptions } from "../auth/[...nextauth]/options";
 
-
 export async function GET(request : Request) {
     dbconnet()
     const session = await getServerSession(authoptions)
-    const sessionuser : User = session?.user as User
+    const sessionuser = session?.user 
     if(!session || !sessionuser){
         return Response.json(
             {

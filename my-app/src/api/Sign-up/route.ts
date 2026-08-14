@@ -2,7 +2,7 @@ import dbconnet from "@/src/lib/dbConnet";
 import UserModel from "@/src/model/User";
 import bcrypt from "bcrypt"
 
-export async function Post(request:Request) {
+export async function POST(request:Request) {
     await dbconnet()
 
     try{

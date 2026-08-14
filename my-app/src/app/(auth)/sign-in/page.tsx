@@ -1,8 +1,7 @@
 'use client'
+import { useSession } from "next-auth/react"
 
-import { useSession , signIn , signOut } from "next-auth/react"
-
-export default function Component() {
+export default function Signinpage() {
     const {data : session} = useSession()
     if(session){
     return (
