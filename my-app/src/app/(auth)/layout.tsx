@@ -1,4 +1,5 @@
 
+import { Navbar } from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toast"
 
 export default function AuthLayout({
@@ -8,6 +9,7 @@ export default function AuthLayout({
 }>) {
   return (
     <div className="flex min-h-screen items-center justify-center">
+      <Navbar/>
       {children}
       <Toaster/>
     </div>
